@@ -4,6 +4,27 @@ server:
 spring:
   application:
     name: catalog-service
+
+  data:
+    mongodb:
+      uri: mongodb://root:example@localhost:27018/
+      database: catalog
+      auto-index-creation: true
+
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+
+queue:
+  movie:
+    name: MovieQueue
+  serie:
+    name: SerieQueue
+
+message: registro up
+
 eureka:
   instance:
     hostname: localhost

@@ -15,6 +15,20 @@ spring:
           predicates:
             - Path=/catalog/**
 
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+looging:
+  looging:
+    pattern:
+      level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
 eureka:
   instance:
     prefer-ip-address: true

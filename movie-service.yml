@@ -16,6 +16,18 @@ spring:
     generate-ddl: true
     show-sql: true
 
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+
+queue:
+  movie:
+    name: MovieQueue
+
+message: registro up
+
 eureka:
   instance:
     hostname: localhost
